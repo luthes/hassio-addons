@@ -3,7 +3,7 @@ FROM $BUILD_FROM
 
 COPY rootfs /
 
-RUN apk -v --update add \
+RUN apk add \
         python \
         py-pip \
         groff \
