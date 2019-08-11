@@ -5,6 +5,7 @@ COPY rootfs /
 
 RUN apk add --no-cache \
     coreutils=8.31-r0 \
+    1.16.85-r1 \
     wget=1.20.3-r0
 
 # Run as soon as the container is started
