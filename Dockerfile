@@ -3,10 +3,16 @@ FROM $BUILD_FROM
 
 COPY rootfs /
 
-RUN apk add --no-cache \
-    coreutils=8.31-r0 \
-    aws-cli=1.16.85-r1 \
-    wget=1.20.3-r0
+RUN apk -v --update add \
+        python \
+        py-pip \
+        groff \
+        less \
+        mailcap \
+        && \
+    pip install --upgrade awscli==1.14.5 s3cmd==2.0.1 python-magic && \
+    apk -v --purge del py-pip && \
+    rm /var/cache/apk/*
 
 # Run as soon as the container is started
 CMD ["/usr/bin/run.sh"]
