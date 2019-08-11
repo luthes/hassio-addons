@@ -18,7 +18,8 @@
     "options"     : {
         "log_level"      : "info",
         "aws_access_key" : "AKIA...",
-        "aws_secret_key" : "ai4i..."
+        "aws_secret_key" : "ai4i...",
+        "aws_s3_bucket" : "my-s3-bucket"
     },
     "schema": {
         "log_level"      : "match(^(trace|debug|info|notice|warning|error|fatal)$)",
