@@ -1,6 +1,6 @@
 {
     "name"        : "s3-sync",
-    "version"     : "dev-1644",
+    "version"     : "dev-1703",
     "slug"        : "s3-sync",
     "description" : "Sync Config to S3",
     "url"         : "https://github.com/luthes/hassio-s3-sync",
