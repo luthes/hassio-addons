@@ -25,6 +25,7 @@
     "schema": {
         "log_level"      : "match(^(trace|debug|info|notice|warning|error|fatal)$)",
         "aws_access_key" : "match(^(?<![A-Z0-9])[A-Z0-9]{20}(?![A-Z0-9])$)",
-        "aws_secret_key" : "match(^(?<![A-Za-z0-9/+=])[A-Za-z0-9/+=]{40}(?![A-Za-z0-9/+=])$)"
+        "aws_secret_key" : "match(^(?<![A-Za-z0-9/+=])[A-Za-z0-9/+=]{40}(?![A-Za-z0-9/+=])$)",
+        "aws_s3_bucket"  : "match(^(?!s3:\/\/*$).*)"
     }
   }
