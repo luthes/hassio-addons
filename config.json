@@ -5,6 +5,7 @@
     "description" : "Sync Config to S3",
     "url"         : "https://github.com/luthes/hassio-s3-sync",
     "startup"     : "application",
+    "map"         : "["backup"],
     "arch"        : [
         "aarch64",
         "amd64",
