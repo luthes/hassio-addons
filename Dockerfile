@@ -14,6 +14,8 @@ RUN apk add \
     apk -v --purge del py-pip && \
     rm /var/cache/apk/*
 
+WORKDIR /
+
 # Run as soon as the container is started
 CMD ["/usr/bin/run.sh"]
 
