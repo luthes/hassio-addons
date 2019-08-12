@@ -17,9 +17,10 @@ bashio::log.debug "Found: $(cd / && find . -type d -name 'backup')"
 
 # Run our Sync Command -- We should make sure that we can
 # Error if no internet or something
-bashio::log.info "Running command: aws s3 sync /backup/ s3://$BUCKET/"
-aws s3 sync /backup/ s3://$BUCKET/ > /dev/null
+bashio::log.debug "Running command: aws s3 sync /backup/ s3://$BUCKET/"
+# This is extremely noise in the logs. Also, maybe only get the most recent?
+aws s3 sync /backup/ s3://$BUCKET/ --only-show-errors
 
-bashio::log.info "Contents of $FOLDER backed up to s3://$BUCKET"
-aws s3 sync /backup/ s3://$BUCKET/ > /dev/null
+bashio::log.info "Move Complete"
+bashio::log.info "Bucket Contents: $(aws s3 ls s3://$BUCKET)"
 
