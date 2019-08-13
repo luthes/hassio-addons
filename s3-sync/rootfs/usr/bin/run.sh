@@ -22,11 +22,11 @@ bashio::log.debug "Running command: aws s3 sync /backup/ s3://$BUCKET/"
 # This is extremely noise in the logs. Also, maybe only get the most recent?
 
 if [ $LOG_LEVEL = 'debug' ]; then
-  aws s3 sync /backup/ s3://$BUCKET/ --only-show-errors
+  aws s3 sync /backup/ s3://$BUCKET/
 elif [ $LOG_LEVEL = 'info' ]; then
-  aws s3 sync /backup/ s3://$BUCKET/
+  aws s3 sync /backup/ s3://$BUCKET/ --only-show-errors
 else
-  aws s3 sync /backup/ s3://$BUCKET/
+  aws s3 sync /backup/ s3://$BUCKET/ --only-show-errors
 fi
 
 bashio::log.info "Move Complete"
